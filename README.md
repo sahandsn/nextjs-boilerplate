@@ -70,7 +70,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 ## Future Roadmap
 
-- Additional improvements and features to be determined in future versions.
+- End-to-end type safety for separate backend (openapi-typescript)
 
 ## Getting Started
 
