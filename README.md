@@ -11,7 +11,6 @@ This repository serves as a boilerplate for creating scalable and modern web app
 ### main
 
 - Create Next.js app using **pnpm**
-- Configure **sitemap** and **robots.txt**
 - Enable **PWA** (Progressive Web App) support
 - Integrate code quality tools (e.g., **ESLint**, **Prettier**, **commitlint** with **husky**)
 - Setup **environment variables** management
@@ -22,6 +21,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 - Implement **next-intl** for translations and translated routes
 - Add **translation language check** to ensure proper localization
+- Configure **sitemap** and **robots.txt**
 
 ---
 
