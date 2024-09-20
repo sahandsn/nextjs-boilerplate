@@ -5,6 +5,7 @@
     "openapi",
     "sahandsn",
     "shadcn",
+    "tailwindcss",
     "zustand"
   ]
 }
