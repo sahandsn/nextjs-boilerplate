@@ -8,24 +8,24 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 ## Versions
 
-### v1 - Initial Setup
+### main
 
 - Create Next.js app using **pnpm**
 - Configure **sitemap** and **robots.txt**
 - Enable **PWA** (Progressive Web App) support
-- Integrate code quality tools (e.g., **ESLint**, **Prettier**)
+- Integrate code quality tools (e.g., **ESLint**, **Prettier**, **commitlint** with **husky**)
 - Setup **environment variables** management
 
 ---
 
-### v2 - Localization and Internationalization
+### v1 - Localization and Internationalization
 
 - Implement **next-intl** for translations and translated routes
 - Add **translation language check** to ensure proper localization
 
 ---
 
-### v3 - UI Enhancements and Theming
+### v2 - UI Enhancements and Theming
 
 - Introduce **Shadcn** UI component library
 - Merge **Tailwind CSS** classes using **tailwind-merge** and utility function `cn` (potential conflict with v4)
@@ -34,7 +34,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 ---
 
-### v4 - Form Handling and Data Management
+### v3 - Form Handling and Data Management
 
 - Integrate **zod** and **react-hook-form** for robust form validation and management
 - Implement server-side actions using [**next-safe-action**](https://next-safe-action.dev/)
@@ -43,26 +43,26 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 ---
 
-### v5 - Centralized State Management
+### v4 - Centralized State Management
 
 - Manage application state centrally using **zustand**
 
 ---
 
-### v6 - Authentication and User Management
+### v5 - Authentication and User Management
 
 - Set up **next-auth** for authentication and user management, including OAuth and custom credentials
 
 ---
 
-### v7 - CI/CD and Deployment
+### v6 - CI/CD and Deployment
 
 - Create a CI/CD pipeline using **GitHub Actions**
 - Support deployment to **Vercel** and **Netlify**
 
 ---
 
-### v8 - Full-stack Application Support
+### v7 - Full-stack Application Support
 
 - Integrate **drizzle** for database management to build full-stack applications
 
@@ -76,5 +76,5 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-repo/nextjs-boilerplate.git
+   git clone https://github.com/sahandsn/nextjs-boilerplate.git
    ```
