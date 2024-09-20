@@ -71,6 +71,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 ## Future Roadmap
 
 - End-to-end type safety for separate backend (openapi-typescript)
+- check env variables at build time
 
 ## Getting Started
 
