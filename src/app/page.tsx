@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import routes from "@/routes";
 
 export default function Home() {
   return (
@@ -95,6 +97,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <Link href={routes["my-page"]}>My Page</Link>
       </footer>
     </div>
   );
