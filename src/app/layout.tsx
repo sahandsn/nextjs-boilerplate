@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { logo, DESCRIPTION, KEYWORDS, TITLE, TITLE_TEMPLATE } from "@/assets";
+import {
+  icoLogo,
+  DESCRIPTION,
+  KEYWORDS,
+  TITLE,
+  TITLE_TEMPLATE,
+} from "@/assets";
 import { env } from "@/env/client";
 
 const geistSans = localFont({
@@ -24,8 +30,8 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: KEYWORDS,
   icons: {
-    icon: logo.src,
-    apple: logo.src,
+    icon: icoLogo.src,
+    apple: icoLogo.src,
   },
   alternates: {
     canonical: env.NEXT_PUBLIC_ROOT_URL,
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
     siteName: TITLE,
     images: [
       {
-        url: `${env.NEXT_PUBLIC_ROOT_URL}/logo.ico`,
+        url: `${env.NEXT_PUBLIC_ROOT_URL}/logo.png`,
       },
     ],
   },
@@ -53,7 +59,7 @@ export const metadata: Metadata = {
       template: TITLE_TEMPLATE,
     },
     description: DESCRIPTION,
-    images: `${env.NEXT_PUBLIC_ROOT_URL}/logo.ico`,
+    images: `${env.NEXT_PUBLIC_ROOT_URL}/logo.png`,
   },
   appleWebApp: {
     capable: true,

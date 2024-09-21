@@ -1,5 +1,12 @@
 import { MetadataRoute } from "next";
-import { TITLE, DESCRIPTION, logo, TITLE_SHORT } from "@/assets";
+import {
+  TITLE,
+  DESCRIPTION,
+  imgLogo,
+  TITLE_SHORT,
+  imgHomePageScreenshot,
+  imgMyPageScreenshot,
+} from "@/assets";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -8,9 +15,9 @@ export default function manifest(): MetadataRoute.Manifest {
     description: DESCRIPTION,
     icons: [
       {
-        src: logo.src,
-        sizes: "any",
-        type: "image/ico",
+        src: imgLogo.src,
+        sizes: `${imgLogo.width}x${imgLogo.height}`,
+        type: "image/png",
       },
     ],
     theme_color: "#FFFFFF",
@@ -18,5 +25,18 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: "/",
     display: "standalone",
     orientation: "portrait",
+    id: "/",
+    screenshots: [
+      {
+        src: imgHomePageScreenshot.src,
+        type: "image/png",
+        sizes: `${imgHomePageScreenshot.width}x${imgHomePageScreenshot.height}`,
+      },
+      {
+        src: imgMyPageScreenshot.src,
+        type: "image/png",
+        sizes: `${imgMyPageScreenshot.width}x${imgMyPageScreenshot.height}`,
+      },
+    ],
   };
 }

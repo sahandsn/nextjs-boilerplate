@@ -7,6 +7,7 @@ const withSerwist = withSerwistInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   compiler: {
     removeConsole: process.env.NEXT_PUBLIC_MODE === "production",
   },
