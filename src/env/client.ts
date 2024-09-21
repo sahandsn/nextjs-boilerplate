@@ -4,8 +4,10 @@ import { z } from "zod";
 export const env = createEnv({
   client: {
     NEXT_PUBLIC_ROOT_URL: z.string().min(1),
+    NEXT_PUBLIC_MODE: z.enum(["production", "development", "test"]),
   },
   runtimeEnv: {
     NEXT_PUBLIC_ROOT_URL: process.env.NEXT_PUBLIC_ROOT_URL,
+    NEXT_PUBLIC_MODE: process.env.NEXT_PUBLIC_MODE,
   },
 });
