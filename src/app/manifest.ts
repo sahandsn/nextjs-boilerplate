@@ -1,4 +1,3 @@
-import { MetadataRoute } from "next";
 import {
   TITLE,
   DESCRIPTION,
@@ -8,7 +7,7 @@ import {
   imgMyPageScreenshot,
 } from "@/assets";
 
-export default function manifest(): MetadataRoute.Manifest {
+export default function manifest() {
   return {
     short_name: TITLE_SHORT,
     name: TITLE,
@@ -31,6 +30,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: imgHomePageScreenshot.src,
         type: "image/png",
         sizes: `${imgHomePageScreenshot.width}x${imgHomePageScreenshot.height}`,
+        form_factor: "wide",
       },
       {
         src: imgMyPageScreenshot.src,
