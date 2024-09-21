@@ -14,6 +14,8 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - Enable **PWA** (Progressive Web App) support
 - Integrate code quality tools (e.g., **ESLint**, **Prettier**, **commitlint** with **husky**)
 - Setup **environment variables** management
+- link preview
+- Configure **sitemap** and **robots.txt**
 
 ---
 
@@ -21,7 +23,6 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 - Implement **next-intl** for translations and translated routes
 - Add **translation language check** to ensure proper localization
-- Configure **sitemap** and **robots.txt**
 
 ---
 
