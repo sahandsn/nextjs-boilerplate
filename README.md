@@ -74,6 +74,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - End-to-end type safety for separate backend (openapi-typescript)
 - animations
 - push notification and offline mode with serwist
+- https://github.com/khmyznikov/pwa-install
 
 ## Getting Started
 
