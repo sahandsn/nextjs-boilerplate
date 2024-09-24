@@ -15,8 +15,9 @@ export const FARSI = {
   title: "فارسی",
 } as const;
 
-export const locales = [ENGLISH.key, GERMAN.key, FARSI.key] as const;
-export const defaultLocale = ENGLISH.key;
+export const locales = [ENGLISH, GERMAN, FARSI] as const;
+const localeKeys = locales.map((locale) => locale.key);
+export const defaultLocale = ENGLISH;
 export const pathnames = {
   [routes.home]: routes.home,
   [routes["my-page"]]: {
@@ -24,11 +25,11 @@ export const pathnames = {
     de: "/meine-seite",
     fa: "/صفحه-من",
   },
-} satisfies Pathnames<typeof locales>;
+} satisfies Pathnames<typeof localeKeys>;
 
 export const routing = defineRouting({
-  locales,
-  defaultLocale,
+  locales: localeKeys,
+  defaultLocale: defaultLocale.key,
   pathnames: pathnames as typeof pathnames & Record<string & {}, string>,
 });
 
