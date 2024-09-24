@@ -76,6 +76,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - push notification and offline mode with serwist
 - https://github.com/khmyznikov/pwa-install
 - Add **translation language check (cspell)** to ensure proper localization
+- More security for PWA [nextjs.org](https://nextjs.org/docs/app/building-your-application/configuring/progressive-web-apps#8-securing-your-application)
 
 ## Getting Started
 
