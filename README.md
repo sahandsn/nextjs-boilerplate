@@ -22,14 +22,14 @@ This repository serves as a boilerplate for creating scalable and modern web app
 ### v1 - Localization and Internationalization
 
 - Implement **next-intl** for translations and translated routes
-- Add **translation language check** to ensure proper localization
+- localized pathname
 
 ---
 
 ### v2 - UI Enhancements and Theming
 
 - Introduce **Shadcn** UI component library
-- Merge **Tailwind CSS** classes using **tailwind-merge** and utility function `cn` (potential conflict with v4)
+- Merge **Tailwind CSS** classes using **tailwind-merge** and utility function `cn`
 - Add **next-theme** for theming support (light/dark mode)
 - Support **RTL (Right-to-Left)** languages and a mechanism for reversing layout for RTL languages
 
@@ -75,6 +75,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - animations
 - push notification and offline mode with serwist
 - https://github.com/khmyznikov/pwa-install
+- Add **translation language check (cspell)** to ensure proper localization
 
 ## Getting Started
 

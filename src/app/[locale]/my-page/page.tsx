@@ -2,11 +2,11 @@ import { Link } from "@/i18n/routing";
 import routes from "@/routes";
 import type { Metadata } from "next";
 import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
-import { IPage } from "@/types";
+import { IPageParams } from "@/types";
 import { useTranslations } from "next-intl";
 
 export async function generateMetadata(
-  props: Readonly<IPage>,
+  props: Readonly<IPageParams>,
 ): Promise<Metadata> {
   const {
     params: { locale },
@@ -18,7 +18,7 @@ export async function generateMetadata(
   };
 }
 
-export default function MyPage(props: Readonly<IPage>) {
+export default function MyPage(props: Readonly<IPageParams>) {
   const {
     params: { locale },
   } = props;

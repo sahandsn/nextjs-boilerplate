@@ -1,11 +1,12 @@
 import { routing } from "@/i18n/routing";
 
-export interface IPage {
+export interface IPageParams {
   params: { locale: string };
 }
-
-export interface ILayout extends IPage {
+export interface IPageChildren {
   children: React.ReactNode;
 }
+
+export type TLayout = IPageParams & IPageChildren;
 
 export type TInternalLink = keyof typeof routing.pathnames;

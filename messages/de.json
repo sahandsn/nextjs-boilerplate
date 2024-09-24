@@ -5,5 +5,14 @@
   },
   "Titles": {
     "myPage": "Meine Seite"
+  },
+  "ThemeSwitcher": {
+    "Light": "Hell",
+    "Dark": "Dunkel",
+    "System": "System",
+    "screen-reader-title": "Design wechseln"
+  },
+  "LocaleSwitcher": {
+    "screen-reader-title": "Sprache wechseln"
   }
 }

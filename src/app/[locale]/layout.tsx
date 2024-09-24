@@ -3,14 +3,10 @@ import localFont from "next/font/local";
 import "../globals.css";
 import { icoLogo, TITLE, TITLE_TEMPLATE } from "@/assets";
 import { env } from "@/env/client";
-import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { ILayout, IPage } from "@/types";
+import { TLayout, IPageParams } from "@/types";
+import RootLayoutProviders from "@/components/layout/root/provider";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,7 +24,7 @@ const geistMono = localFont({
 });
 
 export async function generateMetadata(
-  props: Readonly<IPage>,
+  props: Readonly<IPageParams>,
 ): Promise<Metadata> {
   const {
     params: { locale },
@@ -85,21 +81,18 @@ export async function generateMetadata(
   };
 }
 
-export default async function RootLayout(props: Readonly<ILayout>) {
+export default async function RootLayout(props: Readonly<TLayout>) {
   const {
     children,
     params: { locale },
   } = props;
   unstable_setRequestLocale(locale);
-  const messages = await getMessages();
   return (
-    <html lang={locale} dir="ltr">
+    <html lang={locale} dir="ltr" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <RootLayoutProviders>{children}</RootLayoutProviders>
       </body>
     </html>
   );

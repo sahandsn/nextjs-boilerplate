@@ -5,5 +5,14 @@
   },
   "Titles": {
     "myPage": "صفحه من"
+  },
+  "ThemeSwitcher": {
+    "Light": "روشن",
+    "Dark": "تیره",
+    "System": "سیستم",
+    "screen-reader-title": "تغییر حالت نمایش"
+  },
+  "LocaleSwitcher": {
+    "screen-reader-title": "تغییر زبان"
   }
 }
