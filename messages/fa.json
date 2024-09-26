@@ -14,5 +14,18 @@
   },
   "LocaleSwitcher": {
     "screen-reader-title": "تغییر زبان"
+  },
+  "HomePage": {
+    "item-1": "کار خود را با ویرایش <code>src/app/page.tsx</code> .شروع کنید",
+    "item-2": "ذخیره کنید و تغییرات خود را بلافاصله ببینید.",
+    "btn-action-main": "هم اکنون استقرار دهید",
+    "btn-action-second": "مستندات ما را بخوانید",
+    "btn-footer-1": "یاد بگیرید",
+    "btn-footer-2": "مثال‌ها",
+    "btn-footer-3": "بروید به nextjs.org ←",
+    "btn-footer-4": "صفحه من"
+  },
+  "MyPage": {
+    "btn-back": "بازگشت به صفحه اصلی ←"
   }
 }

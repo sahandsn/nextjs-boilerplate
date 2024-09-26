@@ -24,10 +24,11 @@ export default function MyPage(props: Readonly<IPageParams>) {
   } = props;
   unstable_setRequestLocale(locale);
   const t = useTranslations("Titles");
+  const tr = useTranslations("MyPage");
   return (
     <main>
       <p>{t("myPage")}</p>
-      <Link href={routes.home}>Go Back to Main Page</Link>
+      <Link href={routes.home}>{tr("btn-back")}</Link>
     </main>
   );
 }

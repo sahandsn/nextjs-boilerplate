@@ -4,7 +4,7 @@ import "../globals.css";
 import { icoLogo, TITLE, TITLE_TEMPLATE } from "@/assets";
 import { env } from "@/env/client";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { routing, getDirection } from "@/i18n/routing";
 import { TLayout, IPageParams } from "@/types";
 import RootLayoutProviders from "@/components/layout/root/provider";
 
@@ -87,8 +87,10 @@ export default async function RootLayout(props: Readonly<TLayout>) {
     params: { locale },
   } = props;
   unstable_setRequestLocale(locale);
+  const direction = getDirection(locale);
+
   return (
-    <html lang={locale} dir="ltr" suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

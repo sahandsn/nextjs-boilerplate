@@ -14,5 +14,18 @@
   },
   "LocaleSwitcher": {
     "screen-reader-title": "Sprache wechseln"
+  },
+  "HomePage": {
+    "item-1": "Beginnen Sie, indem Sie <code>src/app/page.tsx</code> bearbeiten.",
+    "item-2": "Speichern und sehen Sie Ihre Änderungen sofort.",
+    "btn-action-main": "Jetzt bereitstellen",
+    "btn-action-second": "Lesen Sie unsere Dokumentation",
+    "btn-footer-1": "Lernen",
+    "btn-footer-2": "Beispiele",
+    "btn-footer-3": "Gehe zu nextjs.org →",
+    "btn-footer-4": "Meine Seite"
+  },
+  "MyPage": {
+    "btn-back": "Zurück zur Hauptseite →"
   }
 }

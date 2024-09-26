@@ -14,5 +14,18 @@
   },
   "LocaleSwitcher": {
     "screen-reader-title": "Toggle locale"
+  },
+  "HomePage": {
+    "item-1": "Get started by editing <code>src/app/page.tsx</code>.",
+    "item-2": "Save and see your changes instantly.",
+    "btn-action-main": "Deploy now",
+    "btn-action-second": "Read our docs",
+    "btn-footer-1": "Learn",
+    "btn-footer-2": "Examples",
+    "btn-footer-3": "Go to nextjs.org →",
+    "btn-footer-4": "My Page"
+  },
+  "MyPage": {
+    "btn-back": "Go Back to Main Page →"
   }
 }
