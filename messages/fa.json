@@ -4,7 +4,8 @@
     "keywords": "Next JS, قالب آماده"
   },
   "Titles": {
-    "myPage": "صفحه من"
+    "myPage": "صفحه من",
+    "myPage-description": "این صفحه نشان می‌دهد که یک مسیر سفارشی چگونه مدیریت خواهد شد."
   },
   "ThemeSwitcher": {
     "Light": "روشن",

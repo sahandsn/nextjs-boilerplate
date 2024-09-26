@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import { IPageParams } from "@/types";
 import { useTranslations } from "next-intl";
+import linkPreviewMetadata from "@/metadata";
 
 export async function generateMetadata(
   props: Readonly<IPageParams>,
@@ -13,8 +14,18 @@ export async function generateMetadata(
   } = props;
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Titles" });
+  const { appleWebApp, openGraph, twitter } = linkPreviewMetadata({
+    description: t("myPage-description"),
+    locale,
+    title: t("myPage"),
+    url: "/my-page",
+  });
   return {
     title: t("myPage"),
+    description: t("myPage-description"),
+    appleWebApp,
+    openGraph,
+    twitter,
   };
 }
 

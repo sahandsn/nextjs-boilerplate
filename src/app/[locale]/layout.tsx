@@ -7,6 +7,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing, getDirection } from "@/i18n/routing";
 import { TLayout, IPageParams } from "@/types";
 import RootLayoutProviders from "@/components/layout/root/provider";
+import linkPreviewMetadata from "@/metadata";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -30,6 +31,13 @@ export async function generateMetadata(
     params: { locale },
   } = props;
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const { openGraph, twitter, appleWebApp } = linkPreviewMetadata({
+    description: t("description"),
+    locale,
+    title: TITLE,
+    url: "/",
+  });
+
   return {
     applicationName: TITLE,
     title: {
@@ -45,36 +53,9 @@ export async function generateMetadata(
     alternates: {
       canonical: env.NEXT_PUBLIC_ROOT_URL,
     },
-    openGraph: {
-      type: "website",
-      locale: "en",
-      url: env.NEXT_PUBLIC_ROOT_URL,
-      title: {
-        default: TITLE,
-        template: TITLE_TEMPLATE,
-      },
-      description: t("description"),
-      siteName: TITLE,
-      images: [
-        {
-          url: `${env.NEXT_PUBLIC_ROOT_URL}/logo.png`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary",
-      title: {
-        default: TITLE,
-        template: TITLE_TEMPLATE,
-      },
-      description: t("description"),
-      images: `${env.NEXT_PUBLIC_ROOT_URL}/logo.png`,
-    },
-    appleWebApp: {
-      capable: true,
-      statusBarStyle: "default",
-      title: TITLE,
-    },
+    openGraph,
+    twitter,
+    appleWebApp,
     formatDetection: {
       telephone: false,
     },

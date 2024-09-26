@@ -11,8 +11,9 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - for bidirectional support, make sure instead of left and right, start and end is used.
 - any route that is needed:
   - add the required file to app folder (routing)
-  - add the same path to routes.ts
-  - add localized path in /i18n/routing.ts
+  - add the same path to routes.ts (used for sitemap and localized path)
+  - add localized path in /i18n/routing.ts (localized path)
+  - use linkPreviewMetadata in /metadata.ts and add title and description separately (metadata)
 
 ---
 
@@ -40,7 +41,7 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 - Introduce **Shadcn** UI component library
 - Merge **Tailwind CSS** classes using **tailwind-merge** and utility function `cn`
-- Add **next-theme** for theming support (light/dark mode)
+- Add **next-theme** for Theming support (light/dark mode)
 - Support **RTL (Right-to-Left)** languages and a mechanism for reversing layout for RTL languages
 - Link preview with twitter card and open graph
 
