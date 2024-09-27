@@ -52,13 +52,13 @@ This repository serves as a boilerplate for creating scalable and modern web app
 - Integrate **zod** and **react-hook-form** for robust form validation and management
 - Implement server-side actions using [**next-safe-action**](https://next-safe-action.dev/)
 - Add **Optimistic UI** updates for better user experience
-- Set up **data fetching** using **react-query**
 
 ---
 
-### v4 - Centralized State Management
+### v4 - State Management
 
 - Manage application state centrally using **zustand**
+- Set up **data fetching** using **react-query**
 
 ---
 
