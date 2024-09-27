@@ -8,7 +8,8 @@ This repository serves as a boilerplate for creating scalable and modern web app
 
 ## Documents
 
-- for bidirectional support, make sure instead of left and right, start and end is used.
+- for bidirectional support, make sure instead of left and right, start and end is used. (bidirectional support)
+- for messages that have both ltr and rtl texts, right the text with prevalent one with placeholder for the other mode, and then copy paste into it. (bidirectional support)
 - any route that is needed:
   - add the required file to app folder (routing)
   - add the same path to routes.ts (used for sitemap and localized path)
