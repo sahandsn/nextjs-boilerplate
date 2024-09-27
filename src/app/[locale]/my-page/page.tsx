@@ -5,6 +5,7 @@ import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import { IPageParams } from "@/types";
 import { useTranslations } from "next-intl";
 import linkPreviewMetadata from "@/metadata";
+import MyForm from "@/components/common/my-form";
 
 export async function generateMetadata(
   props: Readonly<IPageParams>,
@@ -36,10 +37,12 @@ export default function MyPage(props: Readonly<IPageParams>) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Titles");
   const tr = useTranslations("MyPage");
+
   return (
     <main>
       <p>{t("myPage")}</p>
       <Link href={routes.home}>{tr("btn-back")}</Link>
+      <MyForm />
     </main>
   );
 }
