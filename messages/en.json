@@ -28,5 +28,24 @@
   },
   "MyPage": {
     "btn-back": "Go Back to Main Page →"
+  },
+  "MyForm": {
+    "item-1-title": "Username",
+    "item-1-placeholder": "Username",
+    "item-1-description": "This is your public display name.",
+    "item-2-title": "Password",
+    "item-2-placeholder": "Password",
+    "item-2-description": "Choose sth strong.",
+    "btn-action": "Submit"
+  },
+  "LoginFormSchema": {
+    "username-required": "Username is required",
+    "username-type": "Username must be a string",
+    "username-min": "Must be {min} or more characters long",
+    "username-max": "Must be {max} or fewer characters long",
+    "password-required": "Password is required",
+    "password-type": "Password must be a string",
+    "password-min": "Must be {min} or more characters long",
+    "password-max": "Must be {max} or fewer characters long"
   }
 }

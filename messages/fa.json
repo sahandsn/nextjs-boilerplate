@@ -28,5 +28,24 @@
   },
   "MyPage": {
     "btn-back": "بازگشت به صفحه اصلی ←"
+  },
+  "MyForm": {
+    "item-1-title": "نام کاربری",
+    "item-1-placeholder": "نام کاربری",
+    "item-1-description": "این نام نمایش عمومی شما است.",
+    "item-2-title": "رمز عبور",
+    "item-2-placeholder": "رمز عبور",
+    "item-2-description": "یک رمز قوی انتخاب کنید.",
+    "btn-action": "ارسال"
+  },
+  "LoginFormSchema": {
+    "username-required": "نام کاربری الزامی است",
+    "username-type": "نام کاربری باید یک رشته باشد",
+    "username-min": "باید حداقل {min} کاراکتر باشد",
+    "username-max": "باید حداکثر {max} کاراکتر باشد",
+    "password-required": "رمز عبور الزامی است",
+    "password-type": "رمز عبور باید یک رشته باشد",
+    "password-min": "باید حداقل {min} کاراکتر باشد",
+    "password-max": "باید حداکثر {max} کاراکتر باشد"
   }
 }

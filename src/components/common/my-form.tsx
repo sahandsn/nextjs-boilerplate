@@ -15,9 +15,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { loginFormSchema } from "@/schemas";
+import { loginFormSchemaGenerator } from "@/schemas";
+
+import { useTranslations } from "next-intl";
 
 export default function MyForm() {
+  const t = useTranslations("MyForm");
+  const tr = useTranslations("LoginFormSchema");
+  const loginFormSchema = loginFormSchemaGenerator(tr);
   const form = useForm<z.infer<typeof loginFormSchema>>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
@@ -38,13 +43,11 @@ export default function MyForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>{t("item-1-title")}</FormLabel>
               <FormControl>
-                <Input placeholder="Username" {...field} />
+                <Input placeholder={t("item-1-placeholder")} {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
+              <FormDescription>{t("item-1-description")}</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -54,16 +57,16 @@ export default function MyForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>{t("item-2-title")}</FormLabel>
               <FormControl>
-                <Input placeholder="Password" {...field} />
+                <Input placeholder={t("item-2-placeholder")} {...field} />
               </FormControl>
-              <FormDescription>Choose sth strong.</FormDescription>
+              <FormDescription>{t("item-2-description")}</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{t("btn-action")}</Button>
       </form>
     </Form>
   );

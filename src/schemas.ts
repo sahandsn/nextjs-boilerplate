@@ -1,18 +1,26 @@
 import { z } from "zod";
 
-export const loginFormSchema = z.object({
-  username: z
-    .string({
-      required_error: "Username is required",
-      invalid_type_error: "Username must be a string",
-    })
-    .min(2, { message: "Must be 2 or more characters long" })
-    .max(50, { message: "Must be 50 or fewer characters long" }),
-  password: z
-    .string({
-      required_error: "Password is required",
-      invalid_type_error: "Password must be a string",
-    })
-    .min(2, { message: "Must be 2 or more characters long" })
-    .max(50, { message: "Must be 50 or fewer characters long" }),
-});
+const USERNAME_MAX = 50;
+const USERNAME_MIN = 2;
+
+const PASSWORD_MAX = 50;
+const PASSWORD_MIN = 2;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const loginFormSchemaGenerator = (t: any) =>
+  z.object({
+    username: z
+      .string({
+        required_error: t("username-required"),
+        invalid_type_error: t("username-type"),
+      })
+      .min(USERNAME_MIN, { message: t("username-min", { min: USERNAME_MIN }) })
+      .max(USERNAME_MAX, { message: t("username-max", { max: USERNAME_MAX }) }),
+    password: z
+      .string({
+        required_error: t("password-required"),
+        invalid_type_error: t("password-type"),
+      })
+      .min(PASSWORD_MIN, { message: t("password-min", { min: PASSWORD_MIN }) })
+      .max(PASSWORD_MAX, { message: t("password-max", { max: PASSWORD_MAX }) }),
+  });

@@ -39,7 +39,7 @@ export default function MyPage(props: Readonly<IPageParams>) {
   const tr = useTranslations("MyPage");
 
   return (
-    <main>
+    <main className="flex flex-col gap-10">
       <p>{t("myPage")}</p>
       <Link href={routes.home}>{tr("btn-back")}</Link>
       <MyForm />

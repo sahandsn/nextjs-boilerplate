@@ -28,5 +28,24 @@
   },
   "MyPage": {
     "btn-back": "Zurück zur Hauptseite →"
+  },
+  "MyForm": {
+    "item-1-title": "Benutzername",
+    "item-1-placeholder": "Benutzername",
+    "item-1-description": "Dies ist dein öffentlicher Anzeigename.",
+    "item-2-title": "Passwort",
+    "item-2-placeholder": "Passwort",
+    "item-2-description": "Wähle etwas Starkes.",
+    "btn-action": "Absenden"
+  },
+  "LoginFormSchema": {
+    "username-required": "Benutzername ist erforderlich",
+    "username-type": "Benutzername muss eine Zeichenkette sein",
+    "username-min": "Muss {min} oder mehr Zeichen lang sein",
+    "username-max": "Muss {max} oder weniger Zeichen lang sein",
+    "password-required": "Passwort ist erforderlich",
+    "password-type": "Passwort muss eine Zeichenkette sein",
+    "password-min": "Muss {min} oder mehr Zeichen lang sein",
+    "password-max": "Muss {max} oder weniger Zeichen lang sein"
   }
 }
