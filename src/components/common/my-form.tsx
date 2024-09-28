@@ -21,7 +21,7 @@ import { useTranslations } from "next-intl";
 
 export default function MyForm() {
   const t = useTranslations("MyForm");
-  const tr = useTranslations("LoginFormSchema");
+  const tr = useTranslations("Schemas.LoginForm");
   const loginFormSchema = loginFormSchemaGenerator(tr);
   const form = useForm<z.infer<typeof loginFormSchema>>({
     resolver: zodResolver(loginFormSchema),

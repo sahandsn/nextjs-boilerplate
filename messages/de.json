@@ -38,14 +38,16 @@
     "item-2-description": "Wähle etwas Starkes.",
     "btn-action": "Absenden"
   },
-  "LoginFormSchema": {
-    "username-required": "Benutzername ist erforderlich",
-    "username-type": "Benutzername muss eine Zeichenkette sein",
-    "username-min": "Muss {min} oder mehr Zeichen lang sein",
-    "username-max": "Muss {max} oder weniger Zeichen lang sein",
-    "password-required": "Passwort ist erforderlich",
-    "password-type": "Passwort muss eine Zeichenkette sein",
-    "password-min": "Muss {min} oder mehr Zeichen lang sein",
-    "password-max": "Muss {max} oder weniger Zeichen lang sein"
+  "Schemas": {
+    "LoginForm": {
+      "username-required": "Benutzername ist erforderlich",
+      "username-type": "Benutzername muss eine Zeichenkette sein",
+      "username-min": "Muss {min} oder mehr Zeichen lang sein",
+      "username-max": "Muss {max} oder weniger Zeichen lang sein",
+      "password-required": "Passwort ist erforderlich",
+      "password-type": "Passwort muss eine Zeichenkette sein",
+      "password-min": "Muss {min} oder mehr Zeichen lang sein",
+      "password-max": "Muss {max} oder weniger Zeichen lang sein"
+    }
   }
 }
