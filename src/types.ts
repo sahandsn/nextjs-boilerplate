@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import { ReactElement, ReactNodeArray } from "react";
+import { ReactNode } from "react";
 import {
   Formats,
   TranslationValues,
@@ -32,6 +32,25 @@ type ExtractKeysUnderNamespace<
       : never
     : never;
 
+// Utility type to get the type at a given path
+type MessageTypeAtPath<
+  T,
+  P extends string,
+> = P extends `${infer K}.${infer Rest}`
+  ? K extends keyof T
+    ? MessageTypeAtPath<T[K], Rest>
+    : never
+  : P extends keyof T
+    ? T[P]
+    : never;
+
+type FullKey<N extends string, K extends string> = N extends ""
+  ? K
+  : `${N}.${K}`;
+
+type MessageKey<N extends string> = ExtractKeysUnderNamespace<IntlMessages, N> &
+  string;
+
 export type TranslateFn<N extends string> = {
   (
     key: MessageKey<N>,
@@ -42,15 +61,13 @@ export type TranslateFn<N extends string> = {
     key: MessageKey<N>,
     values?: RichTranslationValues,
     formats?: Partial<Formats>,
-  ): string | ReactElement | ReactNodeArray;
+  ): ReactNode;
   markup(
     key: MessageKey<N>,
     values?: MarkupTranslationValues,
     formats?: Partial<Formats>,
   ): string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  raw(key: MessageKey<N>): any;
+  raw<K extends MessageKey<N>>(
+    key: K,
+  ): MessageTypeAtPath<IntlMessages, FullKey<N, K>>;
 };
-
-// Helper type to get valid keys under the namespace N
-type MessageKey<N extends string> = ExtractKeysUnderNamespace<IntlMessages, N>;

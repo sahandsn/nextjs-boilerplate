@@ -7,7 +7,6 @@ const USERNAME_MIN = 2;
 const PASSWORD_MAX = 50;
 const PASSWORD_MIN = 2;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const loginFormSchemaGenerator = (t: TranslateFn<"Schemas.LoginForm">) =>
   z.object({
     username: z
