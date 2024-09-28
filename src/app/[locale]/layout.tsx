@@ -5,7 +5,7 @@ import { icoLogo, TITLE, TITLE_TEMPLATE } from "@/assets";
 import { env } from "@/env/client";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing, getDirection } from "@/i18n/routing";
-import { TLayout, IPageParams } from "@/types";
+import { TLayout, IPageParams } from "@/types/general";
 import RootLayoutProviders from "@/components/layout/root/provider";
 import linkPreviewMetadata from "@/metadata";
 

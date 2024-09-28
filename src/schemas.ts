@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { TranslateFn } from "./types";
+import { TranslationFn } from "./types/translation-fn";
 
 const USERNAME_MAX = 50;
 const USERNAME_MIN = 2;
@@ -7,7 +7,9 @@ const USERNAME_MIN = 2;
 const PASSWORD_MAX = 50;
 const PASSWORD_MIN = 2;
 
-export const loginFormSchemaGenerator = (t: TranslateFn<"Schemas.LoginForm">) =>
+export const loginFormSchemaGenerator = (
+  t: TranslationFn<"Schemas.LoginForm">,
+) =>
   z.object({
     username: z
       .string({

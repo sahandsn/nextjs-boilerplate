@@ -1,7 +1,7 @@
 import RootDesignLayout from "./design";
 import LocaleProvider from "@/components/provider/locale";
 import ThemeProvider from "@/components/provider/theme";
-import { IPageChildren } from "@/types";
+import { IPageChildren } from "@/types/general";
 
 export default function RootProviderLayout(props: Readonly<IPageChildren>) {
   const { children } = props;

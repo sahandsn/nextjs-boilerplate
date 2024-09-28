@@ -1,7 +1,7 @@
 import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
 import { Twitter } from "next/dist/lib/metadata/types/twitter-types";
 import { TITLE } from "@/assets";
-import { TInternalLink } from "@/types";
+import { TInternalLink } from "@/types/general";
 import { env } from "./env/client";
 import { AppleWebApp } from "next/dist/lib/metadata/types/extra-types";
 

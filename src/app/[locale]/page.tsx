@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import routes from "@/routes";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { IPageParams } from "@/types";
+import { IPageParams } from "@/types/general";
 import { useTranslations } from "next-intl";
 
 export default function Home(props: Readonly<IPageParams>) {

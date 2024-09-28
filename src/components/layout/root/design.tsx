@@ -1,6 +1,6 @@
 "use client";
 
-import { IPageChildren } from "@/types";
+import { IPageChildren } from "@/types/general";
 import LocaleSwitcher from "@/components/common/locale-switcher";
 import ThemeSwitcher from "@/components/common/theme-switcher";
 import { DirectionProvider } from "@radix-ui/react-direction";

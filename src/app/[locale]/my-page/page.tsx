@@ -2,7 +2,7 @@ import { Link } from "@/i18n/routing";
 import routes from "@/routes";
 import type { Metadata } from "next";
 import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
-import { IPageParams } from "@/types";
+import { IPageParams } from "@/types/general";
 import { useTranslations } from "next-intl";
 import linkPreviewMetadata from "@/metadata";
 import MyForm from "@/components/common/my-form";
