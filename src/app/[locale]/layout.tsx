@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
-import { icoLogo, TITLE, TITLE_TEMPLATE } from "@/assets";
+import { imgObjLogo, TITLE, TITLE_TEMPLATE } from "@/assets";
 import { env } from "@/env/client";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing, getDirection } from "@/i18n/routing";
@@ -31,12 +31,15 @@ export async function generateMetadata(
     params: { locale },
   } = props;
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const tr = await getTranslations({ locale, namespace: "Images.Logo" });
   const { openGraph, twitter, appleWebApp } = linkPreviewMetadata({
     description: t("description"),
     locale,
     title: TITLE,
     url: "/",
   });
+
+  const { icoLogo } = imgObjLogo(tr);
 
   return {
     applicationName: TITLE,
