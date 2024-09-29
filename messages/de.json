@@ -49,5 +49,14 @@
       "password-min": "Muss {min} oder mehr Zeichen lang sein",
       "password-max": "Muss {max} oder weniger Zeichen lang sein"
     }
+  },
+  "Images": {
+    "Logo": {
+      "full": "Ein einfaches Logo mit einem weißen Dreieck in der Mitte auf einem schwarzen Hintergrund, das häufig mit Vercel, einer Plattform zum Bereitstellen von Next.js-Apps, assoziiert wird."
+    },
+    "PWA-screenshots": {
+      "home": "Eine Standard-Next.js-Seite mit schwarzem Hintergrund, weißem Text und dem Next.js-Logo. Es wird vorgeschlagen, die Datei src/app/page.tsx zu bearbeiten, um zu beginnen, mit Schaltflächen für \"Jetzt bereitstellen\" und \"Unsere Dokumentation lesen\" darunter.",
+      "myPage": "Eine minimalistische Webseite mit schwarzem Hintergrund und weißem Text, der \"Das ist meine Seite\" sagt, sowie einem Link, um \"Zurück zur Hauptseite\" zu gehen."
+    }
   }
 }

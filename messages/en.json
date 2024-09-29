@@ -49,5 +49,14 @@
       "password-min": "Must be {min} or more characters long",
       "password-max": "Must be {max} or fewer characters long"
     }
+  },
+  "Images": {
+    "Logo": {
+      "full": "A simple logo featuring a white triangle centered on a black background, commonly associated with Vercel, a platform for deploying Next.js apps."
+    },
+    "PWA-screenshots": {
+      "home": "A default Next.js page with a black background, white text, and the Next.js logo. It suggests editing src/app/page.tsx to get started, with buttons for \"Deploy now\" and \"Read our docs\" below.",
+      "myPage": "A minimalist web page with a black background and white text saying \"This is my page\" and a link to \"Go Back to Main Page.\""
+    }
   }
 }
