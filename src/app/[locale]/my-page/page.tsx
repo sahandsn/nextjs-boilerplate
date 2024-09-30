@@ -41,7 +41,9 @@ export default function MyPage(props: Readonly<IPageParams>) {
   return (
     <main className="flex flex-col gap-10">
       <p>{t("myPage")}</p>
-      <Link href={routes.home}>{tr("btn-back")}</Link>
+      <Link href={routes.home} className="w-fit">
+        {tr("btn-back")}
+      </Link>
       <MyForm />
     </main>
   );

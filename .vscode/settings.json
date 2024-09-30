@@ -10,12 +10,16 @@
     "openapi",
     "opengraph",
     "Parens",
+    "pockemons",
+    "pokemon",
     "precache",
     "Precache",
     "sahandsn",
     "serwist",
     "shadcn",
     "tailwindcss",
+    "tanstack",
+    "utiles",
     "zustand"
   ]
 }
