@@ -18,10 +18,16 @@ import { Input } from "@/components/ui/input";
 import { loginFormSchemaGenerator } from "@/schemas";
 
 import { useTranslations } from "next-intl";
+import { useStore } from "@/store/bears";
 
 export default function MyForm() {
   const t = useTranslations("MyForm");
   const tr = useTranslations("Schemas.LoginForm");
+
+  // import per field to avoid performance problems
+  const increasePopulation = useStore((state) => state.increasePopulation);
+  const bears = useStore((state) => state.bears);
+
   const loginFormSchema = loginFormSchemaGenerator(tr);
   const form = useForm<z.infer<typeof loginFormSchema>>({
     resolver: zodResolver(loginFormSchema),
@@ -32,11 +38,15 @@ export default function MyForm() {
   });
 
   function onSubmit(values: z.infer<typeof loginFormSchema>) {
+    increasePopulation(12);
     console.log(values);
   }
 
+  console.log("rendered");
+
   return (
     <Form {...form}>
+      <p>{bears}</p>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
