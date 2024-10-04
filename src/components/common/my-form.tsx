@@ -16,17 +16,16 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { loginFormSchemaGenerator } from "@/schemas";
-
+import { useBearStore } from "@/store/bears/provider";
 import { useTranslations } from "next-intl";
-import { useStore } from "@/store/bears";
 
 export default function MyForm() {
   const t = useTranslations("MyForm");
   const tr = useTranslations("Schemas.LoginForm");
 
   // import per field to avoid performance problems
-  const increasePopulation = useStore((state) => state.increasePopulation);
-  const bears = useStore((state) => state.bears);
+  const increasePopulation = useBearStore((state) => state.increasePopulation);
+  const bears = useBearStore((state) => state.bears);
 
   const loginFormSchema = loginFormSchemaGenerator(tr);
   const form = useForm<z.infer<typeof loginFormSchema>>({
@@ -38,7 +37,7 @@ export default function MyForm() {
   });
 
   function onSubmit(values: z.infer<typeof loginFormSchema>) {
-    increasePopulation(12);
+    increasePopulation(1);
     console.log(values);
   }
 

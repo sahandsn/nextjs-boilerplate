@@ -4,7 +4,7 @@ import { IPageChildren } from "@/types/general";
 import { getQueryClient } from "@/query-client";
 import { QueryClientProvider } from "@tanstack/react-query";
 
-export default function Providers(props: Readonly<IPageChildren>) {
+export default function QueryProvider(props: Readonly<IPageChildren>) {
   const { children } = props;
   const queryClient = getQueryClient();
 
